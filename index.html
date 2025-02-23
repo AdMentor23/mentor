@@ -15,6 +15,8 @@
 <body>
     <!-- Animated Background -->
     <div class="animated-background">
+        <div class="network-grid"></div>
+        <div class="particles"></div>
         <div class="floating-elements">
             <span class="element">Leadership</span>
             <span class="element">Growth</span>
@@ -113,7 +115,12 @@
             </div>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="assets/images/leadership-coach.jpg" alt="Leadership Coach" class="coach-portrait">
+                    <img 
+                        src="assets/images/leadership-coach.jpg" 
+                        alt="Leadership Coach" 
+                        class="coach-portrait"
+                        onerror="this.onerror=null; this.src='assets/images/default-profile.jpg'; console.log('Image failed to load');"
+                    >
                     <div class="experience-badge">20+ Years Experience</div>
                 </div>
                 <div class="about-details">
@@ -242,10 +249,12 @@
                 <form id="loginForm" class="auth-form">
                     <h2>Welcome Back</h2>
                     <div class="form-group">
-                        <input type="email" id="loginEmail" required placeholder="Email">
+                        <label for="loginEmail">Username or Email</label>
+                        <input type="email" id="loginEmail" required placeholder="Enter your username or email">
                     </div>
                     <div class="form-group">
-                        <input type="password" id="loginPassword" required placeholder="Password">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" required placeholder="Enter your password">
                     </div>
                     <button type="submit" class="submit-btn">Login</button>
                     <p class="form-footer">
@@ -257,16 +266,24 @@
                 <form id="registerForm" class="auth-form hidden">
                     <h2>Create Account</h2>
                     <div class="form-group">
-                        <input type="text" id="registerName" required placeholder="Full Name">
+                        <label for="registerName">Full Name</label>
+                        <input type="text" id="registerName" required placeholder="Enter your full name">
                     </div>
                     <div class="form-group">
-                        <input type="email" id="registerEmail" required placeholder="Email">
+                        <label for="registerEmail">Email Address</label>
+                        <input type="email" id="registerEmail" required placeholder="Enter your email address">
                     </div>
                     <div class="form-group">
-                        <input type="password" id="registerPassword" required placeholder="Password">
+                        <label for="registerPhone">Phone Number</label>
+                        <input type="tel" id="registerPhone" required placeholder="Enter your phone number">
                     </div>
                     <div class="form-group">
-                        <input type="text" id="registerCompany" placeholder="Company (Optional)">
+                        <label for="registerPassword">Password</label>
+                        <input type="password" id="registerPassword" required placeholder="Create a password">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerCompany">Company (Optional)</label>
+                        <input type="text" id="registerCompany" placeholder="Enter your company name">
                     </div>
                     <button type="submit" class="submit-btn">Register</button>
                 </form>

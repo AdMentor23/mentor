@@ -3,12 +3,54 @@ class BackgroundAnimation {
         this.elements = document.querySelectorAll('.element');
         this.mouse = { x: 0, y: 0 };
         this.isMoving = false;
+        this.createParticles();
         this.initializeEventListeners();
+    }
+
+    createParticles() {
+        const particlesContainer = document.querySelector('.particles');
+        const particleCount = 50;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            
+            // Random initial position
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.top = `${Math.random() * 100}%`;
+            
+            // Random size
+            const size = Math.random() * 3;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            
+            // Random animation delay
+            particle.style.animationDelay = `${Math.random() * 15}s`;
+            
+            particlesContainer.appendChild(particle);
+        }
     }
 
     initializeEventListeners() {
         document.addEventListener('mousemove', (e) => {
             this.handleMouseMove(e);
+        });
+
+        // Add hover interaction
+        this.elements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                element.style.animation = 'none';  // Reset animation
+                setTimeout(() => {
+                    element.style.animation = 'shine 1s ease-in-out';
+                }, 10);
+            });
+            
+            element.addEventListener('animationend', () => {
+                // Restore original floating animation
+                element.style.animation = element.classList.contains('odd') ? 
+                    'float 8s ease-in-out infinite' : 
+                    'float 10s ease-in-out infinite reverse';
+            });
         });
 
         // Optimize performance with requestAnimationFrame
@@ -42,23 +84,17 @@ class BackgroundAnimation {
         if (this.isMoving) {
             this.elements.forEach(element => {
                 const distance = this.getDistance(element);
-                const maxDistance = 300; // Maximum distance for interaction
-                
+                const maxDistance = 200;
+
                 if (distance < maxDistance) {
-                    const rect = element.getBoundingClientRect();
-                    const elementX = rect.left + rect.width / 2;
-                    const elementY = rect.top + rect.height / 2;
-                    
-                    // Calculate angle between mouse and element
                     const angle = Math.atan2(
-                        this.mouse.y - elementY,
-                        this.mouse.x - elementX
+                        this.mouse.y - element.offsetTop,
+                        this.mouse.x - element.offsetLeft
                     );
                     
-                    // Move element away from mouse
                     const force = (maxDistance - distance) / maxDistance;
-                    const moveX = -Math.cos(angle) * force * 100;
-                    const moveY = -Math.sin(angle) * force * 100;
+                    const moveX = Math.cos(angle) * force * 30;
+                    const moveY = Math.sin(angle) * force * 30;
                     
                     element.style.transform = `translate(${moveX}px, ${moveY}px)`;
                     element.classList.add('moving');

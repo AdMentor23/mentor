@@ -161,4 +161,36 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById(tabId).classList.add('active');
         });
     });
+
+    // Add intersection observer for animations
+    const observerOptions = {
+        threshold: 0.2,
+        rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, observerOptions);
+
+    // Observe all sections
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('animate-ready');
+        observer.observe(section);
+    });
+
+    // Add hover effect for expertise items
+    document.querySelectorAll('.expertise-item').forEach(item => {
+        item.addEventListener('mouseenter', (e) => {
+            const icon = e.currentTarget.querySelector('.expertise-icon');
+            icon.style.transform = 'scale(1.2) rotate(5deg)';
+            setTimeout(() => {
+                icon.style.transform = 'scale(1) rotate(0deg)';
+            }, 300);
+        });
+    });
 }); 
