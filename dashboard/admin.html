@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Leadership Evolution</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <nav class="dashboard-nav">
+        <div class="nav-container">
+            <div class="logo">Admin Dashboard</div>
+            <div class="admin-menu">
+                <span id="adminEmail"></span>
+                <button id="logoutBtn" class="auth-btn">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="dashboard-sidebar">
+            <ul class="sidebar-menu">
+                <li class="active"><a href="#overview">Overview</a></li>
+                <li><a href="#users">Users</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#bookings">Bookings</a></li>
+                <li><a href="#content">Content</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+            </ul>
+        </aside>
+
+        <main class="dashboard-main">
+            <section id="overview" class="dashboard-section active">
+                <h2>Dashboard Overview</h2>
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <h3>Total Users</h3>
+                        <p class="stat-number">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Active Bookings</h3>
+                        <p class="stat-number">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Revenue</h3>
+                        <p class="stat-number">€0</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="users" class="dashboard-section">
+                <h2>User Management</h2>
+                <div class="table-controls">
+                    <input type="text" placeholder="Search users..." class="search-input">
+                    <button class="add-btn">Add New User</button>
+                </div>
+                <div class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th>Joined</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody">
+                            <!-- Users will be dynamically loaded -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="services" class="dashboard-section">
+                <h2>Services Management</h2>
+                <div class="table-controls">
+                    <button class="add-btn">Add New Service</button>
+                </div>
+                <div class="services-grid admin-grid">
+                    <!-- Services will be dynamically loaded -->
+                </div>
+            </section>
+
+            <section id="bookings" class="dashboard-section">
+                <h2>Bookings Management</h2>
+                <div class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Service</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bookingsTableBody">
+                            <!-- Bookings will be dynamically loaded -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="analytics" class="dashboard-section">
+                <h2>Analytics</h2>
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <h3>User Growth</h3>
+                        <canvas id="userGrowthChart"></canvas>
+                    </div>
+                    <div class="analytics-card">
+                        <h3>Revenue</h3>
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                    <div class="analytics-card">
+                        <h3>Popular Services</h3>
+                        <canvas id="servicesChart"></canvas>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html> 

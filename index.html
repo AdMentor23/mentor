@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leadership Evolution</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/auth.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="floating-elements">
+            <span class="element">Leadership</span>
+            <span class="element">Growth</span>
+            <span class="element">Vision</span>
+            <span class="element">Purpose</span>
+            <span class="element">Impact</span>
+            <span class="element">Transform</span>
+            <span class="element">Evolve</span>
+            <span class="element">Connect</span>
+            <span class="element">Inspire</span>
+            <span class="element">Journey</span>
+        </div>
+        <div class="gradient-overlay"></div>
+    </div>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">Leadership Evolution</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="loginBtn" class="auth-btn">Login</button></li>
+                <li><button id="registerBtn" class="auth-btn primary">Register</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Creating Intimate Spaces Where Leaders Evolve to Meet a Complex World</h1>
+                <h2>Unlock depth, clarity, and purpose to lead with resilience and vision</h2>
+                
+                <div class="hero-dialogue">
+                    <p>"Are you feeling the weight of complexity, where every decision feels like a compromise between competing priorities?"</p>
+                    <p>"What if you could gain a perspective that cuts through the noise, aligns your vision, and enables you to lead with clarity and confidence?"</p>
+                    <p>"The shift from overwhelm to impact doesn't require more effort—it requires a new way of seeing and leading."</p>
+                </div>
+
+                <div class="cta-buttons">
+                    <button class="cta-btn primary" onclick="document.getElementById('registerBtn').click()">Start Your Journey</button>
+                    <a href="#approach" class="cta-btn secondary">Explore Our Approach</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- LinkedIn Articles Section -->
+        <section id="articles" class="articles">
+            <h2>Latest Insights</h2>
+            <div class="articles-grid">
+                <!-- Articles will be dynamically loaded -->
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Webinars</h3>
+                    <p>Dive into transformative topics with expert-led sessions</p>
+                    <div class="price">€150</div>
+                    <button class="service-btn">Purchase Now</button>
+                </div>
+
+                <div class="service-card">
+                    <h3>Programs</h3>
+                    <p>Tailored programs for leaders and companies seeking profound growth</p>
+                    <div class="price">€200,000</div>
+                    <button class="service-btn">Contact for Details</button>
+                </div>
+
+                <div class="service-card">
+                    <h3>Studies</h3>
+                    <p>Explore insightful studies about people—for your own good</p>
+                    <div class="price">Free with registration</div>
+                    <button class="service-btn">Download Now</button>
+                </div>
+
+                <div class="service-card">
+                    <h3>Live 1-on-1 Coaching</h3>
+                    <p>Get in touch with Marjana to solve your problems and unlock your potential</p>
+                    <div class="price">Custom</div>
+                    <button class="service-btn">Schedule a Call</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="about-header">
+                <h2>Your Partner in Leadership Transformation</h2>
+                <div class="about-subtitle">Guiding Leaders Through Complexity to Clarity</div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="assets/images/leadership-coach.jpg" alt="Leadership Coach" class="coach-portrait">
+                    <div class="experience-badge">20+ Years Experience</div>
+                </div>
+                <div class="about-details">
+                    <div class="about-text">
+                        <p>I am a guide, a deep listener, and a catalyst for growth. My work goes beyond traditional coaching—it's about exploring the depths, connecting the dots, and uncovering meaning where others may not think to look.</p>
+                        <p>This is not just a journey for today's challenges; it is a commitment to shaping leaders who inspire today's partners and lay the foundation for future generations.</p>
+                    </div>
+                    <div class="expertise-areas">
+                        <h3>Areas of Expertise</h3>
+                        <div class="expertise-grid">
+                            <div class="expertise-item">
+                                <span class="expertise-icon">🎯</span>
+                                <h4>Strategic Vision</h4>
+                            </div>
+                            <div class="expertise-item">
+                                <span class="expertise-icon">🤝</span>
+                                <h4>Team Development</h4>
+                            </div>
+                            <div class="expertise-item">
+                                <span class="expertise-icon">🔄</span>
+                                <h4>Change Management</h4>
+                            </div>
+                            <div class="expertise-item">
+                                <span class="expertise-icon">💡</span>
+                                <h4>Innovation Leadership</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Approach Section -->
+        <section id="approach" class="approach">
+            <h2>Our Approach</h2>
+            <div class="approach-content">
+                <p class="approach-intro">My approach to development is rooted in acceptance and appreciation for each individual's unique journey. I believe that we are all whole, and not broken, and therefore there is nothing to fix, but rather a great deal to integrate.</p>
+                <p>This work invites us to consider our shared responsibility to create a more conscious, connected world.</p>
+                <div class="approach-tabs">
+                    <div class="tab-headers">
+                        <button class="tab-header active" data-tab="discovery">Discovery</button>
+                        <button class="tab-header" data-tab="integration">Integration</button>
+                        <button class="tab-header" data-tab="transformation">Transformation</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-panel active" id="discovery">
+                            <h3>Discovery Phase</h3>
+                            <p>Deep listening and exploration of your unique leadership context and challenges.</p>
+                        </div>
+                        <div class="tab-panel" id="integration">
+                            <h3>Integration Phase</h3>
+                            <p>Connecting insights with practical application in your leadership journey.</p>
+                        </div>
+                        <div class="tab-panel" id="transformation">
+                            <h3>Transformation Phase</h3>
+                            <p>Embodying new perspectives and approaches in your leadership practice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Ready to Begin Your Journey?</h2>
+            <p>Whether you're an individual leader, a team, or an organization, let's explore how we can work together to create lasting transformation.</p>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" placeholder="Share your thoughts..." rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+
+            <div class="contact-options">
+                <button class="contact-btn" id="scheduleBtn">Schedule a Call</button>
+            </div>
+
+            <!-- Leadership Reflection Lab -->
+            <div class="reflection-lab">
+                <h3>Leadership Reflection Lab</h3>
+                <div class="reflection-questions">
+                    <p>What leadership challenges are you currently facing?</p>
+                    <p>How do you envision your growth as a leader?</p>
+                    <p>What impact do you want to create in your organization?</p>
+                </div>
+            </div>
+
+            <div class="reflection-prompt">
+                <h3>What's the next step in your leadership journey?</h3>
+            </div>
+        </section>
+
+        <!-- Support Button -->
+        <div class="support-button">
+            <div class="support-modal">
+                <h3>Support Our Community</h3>
+                <div class="support-options">
+                    <button class="support-option" data-amount="5">€5</button>
+                    <button class="support-option" data-amount="7">€7</button>
+                    <button class="support-option" data-amount="10">€10</button>
+                </div>
+            </div>
+            <button id="supportBtn" class="support-trigger">Support Our Community</button>
+        </div>
+
+        <!-- Auth Modal -->
+        <div id="authModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="auth-tabs">
+                    <button class="tab-btn active" data-tab="login">Login</button>
+                    <button class="tab-btn" data-tab="register">Register</button>
+                </div>
+
+                <!-- Login Form -->
+                <form id="loginForm" class="auth-form">
+                    <h2>Welcome Back</h2>
+                    <div class="form-group">
+                        <input type="email" id="loginEmail" required placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="loginPassword" required placeholder="Password">
+                    </div>
+                    <button type="submit" class="submit-btn">Login</button>
+                    <p class="form-footer">
+                        <a href="#" id="forgotPassword">Forgot Password?</a>
+                    </p>
+                </form>
+
+                <!-- Registration Form -->
+                <form id="registerForm" class="auth-form hidden">
+                    <h2>Create Account</h2>
+                    <div class="form-group">
+                        <input type="text" id="registerName" required placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="registerEmail" required placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="registerPassword" required placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="registerCompany" placeholder="Company (Optional)">
+                    </div>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Coming Soon</h3>
+                <ul>
+                    <li>Courses: Interactive learning experiences</li>
+                    <li>School: A new way to learn leadership</li>
+                    <li>Community: Join a network of conscious leaders</li>
+                    <li>Learn with AIStyle: AI-powered growth tools</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html> 
